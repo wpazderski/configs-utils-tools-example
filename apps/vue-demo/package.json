@@ -1,0 +1,43 @@
+{
+    "name": "@wazderski/vue-demo",
+    "private": true,
+    "version": "1.0.0",
+    "author": "Witold Pazderski",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "lint-check": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0",
+        "lint-fix": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0 --fix",
+        "tsc-check": "vue-tsc --noEmit",
+        "check-all": "run-s lint-check tsc-check",
+        "pre-commit-checks": "run-s check-all",
+        "dev": "vite --port 3104",
+        "build": "run-p tsc-check \"build-only {@}\" --",
+        "preview": "vite preview",
+        "build-only": "vite build"
+    },
+    "dependencies": {
+        "vue": "^3.5.16",
+        "vue-router": "^4.5.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.15.29",
+        "@vitejs/plugin-vue": "^5.2.4",
+        "@vitejs/plugin-vue-jsx": "^4.2.0",
+        "@wpazderski/eslint-config": "^1.0.3",
+        "@wpazderski/typescript-config": "^1.0.2",
+        "eslint": "^9.28.0",
+        "npm-run-all2": "^8.0.4",
+        "typescript": "~5.8.3",
+        "vite": "^6.3.5",
+        "vite-plugin-vue-devtools": "^7.7.6",
+        "vue-tsc": "^2.2.10"
+    },
+    "packageManager": "pnpm@10.11.0",
+    "engines": {
+        "node": ">=24.0.0",
+        "pnpm": ">=10.0.0",
+        "npm": "please-use-pnpm",
+        "yarn": "please-use-pnpm"
+    }
+}

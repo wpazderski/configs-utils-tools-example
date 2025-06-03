@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "@wpazderski/typescript-config/baseNodeJs.tsconfig.json",
+    "compilerOptions": {
+        /* Projects */
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tests.tsbuildinfo",
+
+        /* Emit */
+        "noEmit": true,
+
+        /* Interop Constraints */
+        "isolatedDeclarations": false
+    },
+    "include": ["tests/**/*"]
+}

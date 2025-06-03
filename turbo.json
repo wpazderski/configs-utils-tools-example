@@ -1,0 +1,52 @@
+{
+    "$schema": "https://turborepo.com/schema.json",
+    "tasks": {
+        "transit": {
+            "dependsOn": ["^transit"]
+        },
+
+        "lint-check": {
+            "dependsOn": ["transit"]
+        },
+        "lint-fix": {
+            "dependsOn": ["transit"]
+        },
+        "prettier-check": {
+            "dependsOn": ["transit"]
+        },
+        "prettier-fix": {
+            "dependsOn": ["transit"]
+        },
+        "check-all": {
+            "dependsOn": ["transit"]
+        },
+        "tsc-check": {
+            "dependsOn": ["transit"]
+        },
+        "pre-commit-checks": {
+            "dependsOn": ["transit"]
+        },
+
+        "//#lint-check:root": {},
+        "//#lint-fix:root": {},
+        "//#prettier-check:root": {},
+        "//#prettier-fix:root": {},
+        "//#check-all:root": {},
+        "//#tsc-check:root": {},
+        "//#pre-commit-checks:root": {},
+
+        "dev": {
+            "persistent": true,
+            "cache": false,
+            "inputs": ["$TURBO_DEFAULT$", ".env.production.local", ".env.local", ".env.production", ".env"]
+        },
+        "build": {
+            "outputs": [".next/**", "!.next/cache/**", "build/**", "dist/**", "dist-ssr/**", "out/**", "out-tsc/**"],
+            "inputs": ["$TURBO_DEFAULT$", ".env.production.local", ".env.local", ".env.production", ".env"]
+        },
+        "start": {
+            "persistent": true,
+            "cache": false
+        }
+    }
+}

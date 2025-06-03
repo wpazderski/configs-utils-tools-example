@@ -1,0 +1,39 @@
+{
+    "name": "@wpazderski/nextjs-demo",
+    "private": true,
+    "version": "1.0.0",
+    "author": "Witold Pazderski",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "lint-check": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0",
+        "lint-fix": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0 --fix",
+        "tsc-check": "tsc --noEmit",
+        "check-all": "run-s lint-check tsc-check",
+        "pre-commit-checks": "run-s check-all",
+        "dev": "next dev --port 3105",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "^15.3.3",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.15.29",
+        "@types/react": "^19.1.6",
+        "@types/react-dom": "^19.1.5",
+        "@wpazderski/eslint-config": "^1.0.3",
+        "@wpazderski/typescript-config": "^1.0.2",
+        "eslint": "^9.28.0",
+        "typescript": "^5.8.3"
+    },
+    "packageManager": "pnpm@10.11.0",
+    "engines": {
+        "node": ">=24.0.0",
+        "pnpm": ">=10.0.0",
+        "npm": "please-use-pnpm",
+        "yarn": "please-use-pnpm"
+    }
+}

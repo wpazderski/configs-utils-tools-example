@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "@wpazderski/typescript-config/nextJs.tsconfig.json",
+    "compilerOptions": {
+        /* Projects */
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
+
+        /* Modules */
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+
+        /* Plugins */
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
+    },
+    "include": ["src/**/*", ".next/types/**/*.ts", "eslint.config.ts", "eslint-watch.config.ts", "next-env.d.ts", "next.config.ts"],
+    "exclude": ["node_modules"]
+}

@@ -1,0 +1,53 @@
+{
+    "name": "@wpazderski/configs-example-project",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Example project for @wpazderski/*-config packages",
+    "keywords": [
+        "example",
+        "config",
+        "tsconfig",
+        "typescript",
+        "prettier",
+        "eslint"
+    ],
+    "author": "Witold Pazderski",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "dev": "turbo run dev",
+        "build": "turbo run build",
+        "start": "turbo run start",
+        "lint-check:root": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0",
+        "lint-fix:root": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0 --fix",
+        "prettier-check:root": "prettier ./ --check",
+        "prettier-fix:root": "prettier ./ --write",
+        "tsc-check:root": "tsc --noEmit",
+        "check-all:root": "run-s lint-check:root prettier-check:root tsc-check:root",
+        "pre-commit-checks:root": "run-s check-all:root",
+        "lint-check": "turbo run lint-check lint-check:root",
+        "lint-fix": "turbo run lint-fix lint-fix:root",
+        "prettier-check": "turbo run prettier-check prettier-check:root",
+        "prettier-fix": "turbo run prettier-fix prettier-fix:root",
+        "tsc-check": "turbo run tsc-check tsc-check:root",
+        "check-all": "turbo run check-all check-all:root",
+        "pre-commit-checks": "turbo run pre-commit-checks pre-commit-checks:root"
+    },
+    "devDependencies": {
+        "@wpazderski/eslint-config": "^1.0.3",
+        "@wpazderski/prettier-config": "^1.0.1",
+        "@wpazderski/typescript-config": "^1.0.2",
+        "eslint": "^9.28.0",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^3.5.3",
+        "turbo": "^2.5.4",
+        "typescript": "^5.8.3"
+    },
+    "packageManager": "pnpm@10.11.0",
+    "engines": {
+        "node": ">=24.0.0",
+        "pnpm": ">=10.0.0",
+        "npm": "please-use-pnpm",
+        "yarn": "please-use-pnpm"
+    }
+}

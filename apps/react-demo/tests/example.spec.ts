@@ -1,8 +1,10 @@
 import { expect, test } from "@playwright/test";
+import { PageUtils } from "@wpazderski/playwright-utils/PageUtils.js";
 
 test.describe("playwright example", () => {
     test.beforeEach(async ({ page }) => {
         await page.goto("/");
+        PageUtils.pipeWebConsoleToStdout(page);
     });
 
     test("testing works", async ({ page }) => {

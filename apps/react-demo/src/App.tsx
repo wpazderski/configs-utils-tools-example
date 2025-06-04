@@ -4,6 +4,8 @@ import viteLogo from "./assets/vite.svg";
 import "./App.css";
 
 export function App() {
+    // eslint-disable-next-line no-console
+    console.log("Rendering App component");
     const [count, setCount] = useState(0);
     const handleButtonClick = useCallback(() => {
         setCount((prev) => prev + 1);

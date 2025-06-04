@@ -1,65 +1,12 @@
-import os from "os";
-import { defineConfig, devices } from "@playwright/test";
-import type { ViewportSize } from "@playwright/test";
-
-const viewport: ViewportSize = {
-    width: 1920,
-    height: 1080,
-};
+import type { PlaywrightTestConfig } from "@playwright/test";
+import { getBasePlaywrightConfig } from "@wpazderski/playwright-config/base.config.js";
 
 const isCi = Boolean(process.env["CI"]);
 const port = process.env["PORT"] ?? "3102";
 
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
-export default defineConfig({
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+export default getBasePlaywrightConfig({
+    isCi: isCi,
+    webServerUrl: `http://localhost:${port}`,
     testDir: "./tests",
-    fullyParallel: true,
-    forbidOnly: Boolean(isCi),
-    retries: isCi ? 2 : 0,
-    workers: isCi ? 1 : os.cpus().length,
-    reporter: [
-        [
-            "html",
-            {
-                open: "never",
-            },
-        ],
-    ],
-    use: {
-        baseURL: `http://localhost:${port}`,
-        trace: "on-first-retry",
-        testIdAttribute: "data-test-id",
-        viewport: viewport,
-    },
-
-    projects: [
-        {
-            name: "chromium",
-            use: {
-                ...devices["Desktop Chrome"],
-                viewport,
-            },
-        },
-        {
-            name: "firefox",
-            use: {
-                ...devices["Desktop Firefox"],
-                viewport,
-            },
-        },
-        {
-            name: "webkit",
-            use: {
-                ...devices["Desktop Safari"],
-                viewport,
-            },
-        },
-    ],
-    webServer: {
-        command: "pnpm run start-test-server",
-        url: `http://localhost:${port}`,
-        reuseExistingServer: !isCi,
-    },
-});
+}) as PlaywrightTestConfig;

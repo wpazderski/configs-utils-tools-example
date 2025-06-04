@@ -1,10 +1,12 @@
-# configs-example-project
+# configs-utils-example
 
-This project is an example that shows how to use configs:
+This project is an example that shows how to use configs and utils:
 
 - [@wpazderski/prettier-config](https://github.com/wpazderski/prettier-config),
 - [@wpazderski/eslint-config](https://github.com/wpazderski/eslint-config),
-- [@wpazderski/typescript-config](https://github.com/wpazderski/typescript-config).
+- [@wpazderski/typescript-config](https://github.com/wpazderski/typescript-config),
+- [@wpazderski/playwright-config](https://github.com/wpazderski/playwright-config),
+- [@wpazderski/playwright-utils](https://github.com/wpazderski/playwright-utils).
 
 ## Installation and usage
 

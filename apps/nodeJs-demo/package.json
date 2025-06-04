@@ -17,8 +17,8 @@
     },
     "devDependencies": {
         "@types/node": "^22.15.29",
-        "@wpazderski/eslint-config": "^1.0.3",
-        "@wpazderski/typescript-config": "^1.0.2",
+        "@wpazderski/eslint-config": "^1.0.4",
+        "@wpazderski/typescript-config": "^1.0.3",
         "eslint": "^9.28.0",
         "typescript": "^5.8.3"
     },

@@ -8,19 +8,22 @@
     "scripts": {
         "lint-check": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0",
         "lint-fix": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0 --fix",
-        "tsc-check": "tsc --noEmit",
+        "tsc-check": "tsc -b --noEmit",
         "check-all": "run-s lint-check tsc-check",
         "pre-commit-checks": "run-s check-all",
         "dev": "node src/main.ts",
         "build": "tsc -b",
         "start": "node dist/main.js"
     },
+    "dependencies": {
+        "@wpazderski/js-utils": "^1.0.0"
+    },
     "devDependencies": {
-        "@types/node": "^22.15.29",
-        "@wpazderski/eslint-config": "^1.0.4",
-        "@wpazderski/typescript-config": "^1.0.3",
-        "eslint": "^9.28.0",
-        "typescript": "^5.8.3"
+        "@types/node": "^24.2.1",
+        "@wpazderski/eslint-config": "^1.0.5",
+        "@wpazderski/typescript-config": "^1.0.4",
+        "eslint": "^9.33.0",
+        "typescript": "^5.9.2"
     },
     "packageManager": "pnpm@10.11.0",
     "engines": {

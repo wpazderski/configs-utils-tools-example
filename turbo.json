@@ -34,6 +34,8 @@
         "//#check-all:root": {},
         "//#tsc-check:root": {},
         "//#pre-commit-checks:root": {},
+        "//#check-licenses": {},
+        "//#check-outdated-packages": {},
 
         "dev": {
             "persistent": true,

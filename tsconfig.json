@@ -15,5 +15,5 @@
         /* Interop Constraints */
         "isolatedDeclarations": false
     },
-    "include": ["eslint.config.ts", "eslint-watch.config.ts", ".prettierrc.js"]
+    "include": ["eslint.config.ts", "eslint-watch.config.ts", "package.config.ts", ".prettierrc.js"]
 }

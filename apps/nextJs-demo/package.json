@@ -8,7 +8,7 @@
     "scripts": {
         "lint-check": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0",
         "lint-fix": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0 --fix",
-        "tsc-check": "tsc --noEmit",
+        "tsc-check": "tsc -b --noEmit",
         "check-all": "run-s lint-check tsc-check",
         "pre-commit-checks": "run-s check-all",
         "dev": "next dev --port 3105",
@@ -16,18 +16,18 @@
         "start": "next start"
     },
     "dependencies": {
-        "next": "^15.3.3",
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0"
+        "next": "^15.4.6",
+        "react": "^19.1.1",
+        "react-dom": "^19.1.1"
     },
     "devDependencies": {
-        "@types/node": "^22.15.29",
-        "@types/react": "^19.1.6",
-        "@types/react-dom": "^19.1.6",
-        "@wpazderski/eslint-config": "^1.0.4",
-        "@wpazderski/typescript-config": "^1.0.3",
-        "eslint": "^9.28.0",
-        "typescript": "^5.8.3"
+        "@types/node": "^24.2.1",
+        "@types/react": "^19.1.10",
+        "@types/react-dom": "^19.1.7",
+        "@wpazderski/eslint-config": "^1.0.5",
+        "@wpazderski/typescript-config": "^1.0.4",
+        "eslint": "^9.33.0",
+        "typescript": "^5.9.2"
     },
     "packageManager": "pnpm@10.11.0",
     "engines": {

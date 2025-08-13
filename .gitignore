@@ -60,6 +60,7 @@ next-env.d.ts
 
 # Env files
 .env*
+!.env.example
 
 # Testing
 coverage

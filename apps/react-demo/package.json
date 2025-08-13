@@ -8,7 +8,7 @@
     "scripts": {
         "lint-check": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0",
         "lint-fix": "eslint ./ --flag unstable_native_nodejs_ts_config --flag unstable_config_lookup_from_file --max-warnings 0 --fix",
-        "tsc-check": "tsc --noEmit",
+        "tsc-check": "tsc -b --noEmit",
         "check-all": "run-s lint-check tsc-check",
         "pre-commit-checks": "run-s check-all",
         "dev": "vite --port 3102",
@@ -22,22 +22,23 @@
         "test-all": "playwright test"
     },
     "dependencies": {
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0"
+        "@wpazderski/js-utils": "^1.0.0",
+        "react": "^19.1.1",
+        "react-dom": "^19.1.1"
     },
     "devDependencies": {
-        "@playwright/test": "^1.52.0",
-        "@types/node": "^22.15.29",
-        "@types/react": "^19.1.6",
-        "@types/react-dom": "^19.1.6",
-        "@vitejs/plugin-react": "^4.5.1",
-        "@wpazderski/eslint-config": "^1.0.4",
-        "@wpazderski/playwright-config": "^1.0.3",
-        "@wpazderski/playwright-utils": "^1.0.1",
-        "@wpazderski/typescript-config": "^1.0.3",
-        "eslint": "^9.28.0",
-        "typescript": "~5.8.3",
-        "vite": "^6.3.5"
+        "@playwright/test": "^1.54.2",
+        "@types/node": "^24.2.1",
+        "@types/react": "^19.1.10",
+        "@types/react-dom": "^19.1.7",
+        "@vitejs/plugin-react": "^5.0.0",
+        "@wpazderski/eslint-config": "^1.0.5",
+        "@wpazderski/playwright-config": "^1.0.4",
+        "@wpazderski/playwright-utils": "^1.0.2",
+        "@wpazderski/typescript-config": "^1.0.4",
+        "eslint": "^9.33.0",
+        "typescript": "~5.9.2",
+        "vite": "^7.1.2"
     },
     "packageManager": "pnpm@10.11.0",
     "engines": {

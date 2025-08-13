@@ -1,4 +1,4 @@
-# configs-utils-example
+# @wpazderski/configs-utils-tools-example
 
 This project is an example that shows how to use configs and utils:
 
@@ -6,7 +6,9 @@ This project is an example that shows how to use configs and utils:
 - [@wpazderski/eslint-config](https://github.com/wpazderski/eslint-config),
 - [@wpazderski/typescript-config](https://github.com/wpazderski/typescript-config),
 - [@wpazderski/playwright-config](https://github.com/wpazderski/playwright-config),
-- [@wpazderski/playwright-utils](https://github.com/wpazderski/playwright-utils).
+- [@wpazderski/playwright-utils](https://github.com/wpazderski/playwright-utils),
+- [@wpazderski/js-utils](https://github.com/wpazderski/js-utils),
+- [@wpazderski/node-package-tools](https://github.com/wpazderski/node-package-tools).
 
 ## Installation and usage
 
@@ -31,3 +33,7 @@ You can also run all subprojects by executing the above command in the root dire
 - Angular (`./apps/angular/`; port: `3103`),
 - Vue (`./apps/react/`; port: `3104`),
 - Next.js (`./apps/react/`; port: `3105`),
+
+## Related projects
+
+See [https://pazderski.dev/projects/](https://pazderski.dev/projects/) for other projects that provide various configs, utils, tools and examples.

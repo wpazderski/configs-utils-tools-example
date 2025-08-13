@@ -8,7 +8,14 @@
         /* Modules */
         "paths": {
             "@/*": ["./src/*"]
-        }
+        },
+        "rewriteRelativeImportExtensions": false,
+
+        /* Emit */
+        "noEmit": true,
+
+        /* Interop Constraints */
+        "isolatedDeclarations": false
     },
     "include": ["src/**/*", "src/**/*.vue", "env.d.ts"],
     "exclude": ["src/**/__tests__/*"]
